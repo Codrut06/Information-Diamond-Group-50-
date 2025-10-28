@@ -96,7 +96,7 @@ with st.expander("Filters", expanded=True):
         field_col = next((c for c in ["field", "field_text", "field_name"] if c in df.columns), None)
         if field_col:
             field_values = sorted([str(x) for x in df[field_col].dropna().unique()], key=str.lower)
-            field_sel = st.selectbox("Field of Study", ["(all)"] + field_values)
+            field_sel = st.selectbox("Field", ["(all)"] + field_values)
         else:
             field_sel = "(all)"
             field_col = None
@@ -118,3 +118,4 @@ if field_col and field_sel != "(all)":
 
 st.markdown(f"**Rows after filters:** {len(filtered):,}")
 st.dataframe(filtered.head(200), use_container_width=True)
+
