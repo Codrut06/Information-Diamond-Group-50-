@@ -549,7 +549,7 @@ with left:
         _ = st.text_area(
             "SQL",
             key="sql_text",
-            height=160,
+            height=480,
             placeholder="Type a SELECT over df (or choose a preset)…",
         )
 
@@ -806,3 +806,4 @@ if want_run:
                 break
 
         render_output_tabs(clean_sql, res_df, ms, preset_name)
+
