@@ -504,7 +504,7 @@ st.markdown("<div class='hr-soft'></div>", unsafe_allow_html=True)
 
 # ================================ LAYOUT =================================
 
-left, right = st.columns([4, 2.2], gap="large")
+left, right = st.columns([1.8, 1.2], gap="large")
 
 # --------- RIGHT: PRESETS PANEL -----------------------------------------
 
@@ -549,7 +549,7 @@ with left:
         _ = st.text_area(
             "SQL",
             key="sql_text",
-            height=480,
+            height=160,
             placeholder="Type a SELECT over df (or choose a preset)…",
         )
 
@@ -806,5 +806,3 @@ if want_run:
                 break
 
         render_output_tabs(clean_sql, res_df, ms, preset_name)
-
-
