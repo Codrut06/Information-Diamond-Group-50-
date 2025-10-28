@@ -253,7 +253,7 @@ if st.button("Run Evaluation", type="primary"):
 
     st.subheader("Metrics")
     st.markdown("*Confusion Matrix (rows = actual, columns = predicted)*")
-    st.table(pd.DataFrame(cm, index=["Actual 0", "Actual 1"], columns=["Pred 0", "Pred 1"]))
+    st.table(pd.DataFrame(cm, index=["Positive", "Negative"], columns=["True", "False"]))
 
     m1, m2 = st.columns(2)
     m1.metric("Accuracy", f"{acc:.3f}")
