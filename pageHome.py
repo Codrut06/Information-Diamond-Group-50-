@@ -171,11 +171,11 @@ def section_performance() -> None:
         "Feature": [
             "Self-rated features",
             "Shared interests",
-            "Fits stated preferences",
+            # "Fits stated preferences",
             "Other-rated features",
             "Demographics",
         ],
-        "MAE": [3.5, 2.5, 2.0, 12.0, 8.0],
+        "MAE": [0.169, 0.187, 0.152, 0.194],
     }
     df_imp = pd.DataFrame(data).sort_values("MAE", ascending=True)
     st.bar_chart(df_imp, x="Feature", y="MAE", height=380, use_container_width=True)
