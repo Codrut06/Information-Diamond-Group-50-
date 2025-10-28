@@ -96,7 +96,7 @@ with st.expander("Filters", expanded=True):
         field_col = next((c for c in ["field", "field_text", "field_name"] if c in df.columns), None)
         if field_col:
             field_values = sorted([str(x) for x in df[field_col].dropna().unique()], key=str.lower)
-            field_sel = st.selectbox("Field of Study", ["(all)"] + field_values)
+            field_sel = st.selectbox("Field", ["(all)"] + field_values)
         else:
             field_sel = "(all)"
             field_col = None
@@ -163,3 +163,4 @@ else:
         ax.set_ylabel("Density" if h_density else "Count")
         plt.tight_layout(pad=1.0)
         st.pyplot(fig, use_container_width=False, bbox_inches="tight", width=350)
+
