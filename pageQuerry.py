@@ -504,7 +504,7 @@ st.markdown("<div class='hr-soft'></div>", unsafe_allow_html=True)
 
 # ================================ LAYOUT =================================
 
-left, right = st.columns([1.8, 1.2], gap="large")
+left, right = st.columns([4, 2.2], gap="large")
 
 # --------- RIGHT: PRESETS PANEL -----------------------------------------
 
@@ -806,4 +806,5 @@ if want_run:
                 break
 
         render_output_tabs(clean_sql, res_df, ms, preset_name)
+
 
