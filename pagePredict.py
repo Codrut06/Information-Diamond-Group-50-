@@ -181,7 +181,7 @@ presence = {
 }
 cols = st.columns(len(presence))
 for (label, ok), c in zip(presence.items(), cols):
-    c.markdown(f"{'✅' if ok else '❌'} *{label}*")
+    c.markdown(f"{'Loaded: ' if ok else 'Unable to load: '} *{label}*")
 
 # Load all artifacts
 try:
